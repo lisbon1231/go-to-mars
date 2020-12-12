@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Form</title>
+  <link href="index.css" rel="stylesheet"></link>
+  <script> </script> <!-- fixes https://lab.laukstein.com/bug/input -->
+</head>
+<body class="page">
+  <div class="page__container">
+    <div class="slider slider_active_right">
+      <div class="slider__base">
+        <div class="slider__baseItem slider__baseItem_pos_left">
+          <form class="form form_type_login" action="#" method="POST" novalidate>
+            <h2 class="form__title">Sign in</h2>
+            <div class="form__inputCont">
+              <label class="form__lable">
+                <p class="form__lableText">Email:</p>
+                <input class="form__input form__input_type_email" type="email" name="email"
+                  placeholder="smith@example.com" required minlength="7" tabindex="1" autofocus>
+                <div class="form__error form__error_type_email"></div>
+              </label>
+              <label class="form__lable">
+                <p class="form__lableText">Password:</p>
+                <input class="form__input form__input_type_pass" type="password" name="password" placeholder="" required
+                  tabindex="2" minlength="8">
+                <div class="form__error form__error_type_pass"></div>
+              </label>
+            </div>
+            <a class="form__info link" href="#" tabindex="4">Forgot your password?</a>
+            <button class="button form__button" type="submit" tabindex="3">Sign in</button>
+          </form>
+          <p class="slider__text">New to Mars? <span class="slider__toggler" tabindex="5">Create an account.</span></p>
+        </div>
+        <div class="slider__baseItem slider__baseItem_pos_right">
+          <form class="form form_type_register" action="#" method="POST" novalidate>
+            <h2 class="form__title">Sign up</h2>
+            <div class="form__inputCont">
+              <label class="form__lable">
+                <p class="form__lableText">Name:</p>
+                <input class="form__input form__input_type_name" type="text" name="name" placeholder="John Smith"
+                  required tabindex="7">
+                <div class="form__error form__error_type_name"></div>
+              </label>
+              <label class="form__lable">
+                <p class="form__lableText">Email:</p>
+                <input class="form__input form__input_type_email" type="text" name="email"
+                  placeholder="smith@example.com" required tabindex="8" minlength="7">
+                <div class="form__error form__error_type_email"></div>
+              </label>
+              <label class="form__lable">
+                <p class="form__lableText">Password:</p>
+                <input class="form__input form__input_type_pass" type="password" name="password" placeholder="" required
+                  tabindex="9">
+                <div class="form__error form__error_type_pass"></div>
+              </label>
+            </div>
+            <button class="button form__button" type="submit" tabindex="10">Sign up</button>
+          </form>
+          <p class="slider__text">Already one of Martians? <span class="slider__toggler" tabindex="11">Sign in.</span>
+          </p>
+        </div>
+      </div>
+      <div class="slider__overlay">
+        <div class="slider__overlayContainer">
+          <div class="slider__overlayItem slider__overlayItem_pos_left">
+            <div class="slider__overlayContent">
+              <p class="slider__overlayIntro">Welcome Back!</p>
+              <p class="slider__overlayText">To keep connected with us please login with your personal info</p>
+              <button class="button button_theme_light slider__button" tabindex="12">Sign in</button>
+            </div>
+          </div>
+          <div class="slider__overlayItem slider__overlayItem_pos_right">
+            <div class="slider__overlayContent">
+              <p class="slider__overlayIntro">Hello, Friend!</p>
+              <p class="slider__overlayText">Enter your personal details and go to Mars with us</p>
+              <button class="button button_theme_light slider__button" tabindex="6">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script defer src="index.js" type="module"></script>
+</body>
+</html>
